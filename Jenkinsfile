@@ -9,7 +9,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'docker build .'
+                sh 'docker build -t .'
             }
         }
         stage('test') {
