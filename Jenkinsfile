@@ -2,6 +2,11 @@
 pipeline {
     agent any
     stages {
+        stage('dummy') {
+            steps {
+                sh 'echo My name is John!'
+            }
+        }
         stage('build') {
             steps {
                 sh 'docker build .'
@@ -9,7 +14,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                sh 'echo Hello World'
+                sh 'docker images'
                 sh 'echo My name is John!'
             }
         }
