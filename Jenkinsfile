@@ -9,7 +9,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'docker build -t .'
+                sh 'docker build -t professorlogan/flaskappdocker .'
             }
         }
         stage('test') {
