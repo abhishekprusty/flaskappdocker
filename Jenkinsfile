@@ -15,7 +15,6 @@ pipeline {
         stage('test') {
             steps {
                 sh 'docker images'
-                sh 'echo My name is John!'
             }
         }
     }
