@@ -2,9 +2,9 @@
 pipeline {
     agent any
     stages {
-        stage('dummy') {
+        stage('static_check') {
             steps {
-                sh 'echo My name is John!'
+                sh 'cat Dockerfile'
             }
         }
         stage('build') {
