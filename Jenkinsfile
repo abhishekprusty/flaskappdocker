@@ -15,6 +15,14 @@ pipeline {
         stage('test') {
             steps {
                 sh 'docker images'
+                sh 'docker run -d professorlogan/flaskappdocker'
+                sh 'docker ps -a'
+            }
+        }
+        stage('execute') {
+            steps {
+                sh 'docker run -d professorlogan/flaskappdocker'
+                sh 'docker ps -a'
             }
         }
     }
