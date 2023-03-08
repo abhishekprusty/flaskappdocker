@@ -3,9 +3,11 @@ pipeline {
     agent any
     stages {
         stage('static_check') {
+            environment {
+        SECRET_FILE_ID = credentials('secret-file-id')
+      }
             steps {
                 sh 'cat Dockerfile'
-                SECRET_FILE_ID = credentials('secret-file-id')
                 echo $SECRET_FILE_ID
                 
             }
