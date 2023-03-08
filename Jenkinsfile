@@ -5,6 +5,9 @@ pipeline {
         stage('static_check') {
             steps {
                 sh 'cat Dockerfile'
+                SECRET_FILE_ID = credentials('secret-file-id')
+                echo $SECRET_FILE_ID
+                
             }
         }
         stage('build') {
