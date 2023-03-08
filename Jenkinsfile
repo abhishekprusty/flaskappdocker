@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('static_check') {
             environment {
-        SECRET_FILE_ID = credentials('secret-file-id')
+        SECRET_FILE_ID = credentials('secretfile22')
       }
             steps {
                 sh 'cat Dockerfile'
