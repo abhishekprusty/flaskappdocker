@@ -8,7 +8,7 @@ pipeline {
       }
             steps {
                 sh 'cat Dockerfile'
-                echo $SECRET_FILE_ID
+                sh 'echo ${SECRET_FILE_ID}'
                 
             }
         }
